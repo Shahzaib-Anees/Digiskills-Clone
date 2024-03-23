@@ -1,0 +1,94 @@
+@media (min-width : 200px) and (max-width:770px) {
+
+    /* Navbar  */
+    .navbar {
+        background-color: #f6f6f6;
+        padding: 25px 15px;
+        gap: 30px;
+    }
+
+    /* Navlogo  */
+    .nav_logo {
+        width: 220px;
+        height: 44px;
+    }
+
+    /* nav Links  */
+    #nav_links {
+        background-color: #f6f6f6;
+        width: 100%;
+        position: absolute;
+        top: 90px;
+        left: 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0px;
+        display: none;
+        padding-bottom: 20px;
+    }
+
+    .link {
+        width: 100%;
+        text-align: center;
+        border-bottom: 2px dotted #ccc;
+    }
+
+    .link:hover {
+        border-bottom: 2px dotted #ccc;
+    }
+
+    .link>a {
+        font-size: 17px;
+    }
+
+    .search_icon {
+        display: none;
+    }
+
+    #sign_button {
+        background-color: #f6f6f6;
+        margin-left: 0;
+    }
+    #sign_button>a{
+        color: var(--font-color);
+        font-size: 17px;
+    }
+
+    .search_icon2{
+        width: 40px;
+        height: 40px;
+        background-color: var(--pri-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 17px;
+        border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    }
+    
+    .search_icon2:hover{
+        color: #fff;
+        background-color:var(--font-color) ;
+        transition:background-color 0.4s ease-in;
+    }
+    
+
+    #xmark{
+        width: 100%;
+       display: flex;
+       font-size: 30px;
+       align-items: center;
+       justify-content: flex-end;
+       padding: 3px 20px; 
+    }
+
+    #nav_bars {
+        display: flex;
+        font-size: 35px;
+        font-weight: 100;
+        margin-top: 8px;
+    }
+
+
+}
