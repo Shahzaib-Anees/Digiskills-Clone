@@ -5,6 +5,7 @@
         background-color: #f6f6f6;
         padding: 25px 15px;
         gap: 30px;
+        justify-content: space-between;
     }
 
     /* Navlogo  */

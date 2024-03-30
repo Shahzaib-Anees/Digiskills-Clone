@@ -50,8 +50,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px; 
-    margin-left: 40px;
+    gap: 25px;
 }
 
 .link{
