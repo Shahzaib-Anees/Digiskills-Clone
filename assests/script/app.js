@@ -18,3 +18,14 @@ function hamburger_remover() {
         console.log("False")
     }
 }
+
+// Mouse Over Function for Extra Links
+// function box_visibility(){
+//     let box = document.getElementById("link_cart")
+//     if(box.style.display === "none"){
+//         box.style.display = "flex";
+//         console.log("True");
+//     }else{
+//         console.log("Failed");
+//     }
+// }
