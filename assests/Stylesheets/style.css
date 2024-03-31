@@ -7,14 +7,25 @@
 }
 
 body {
+    width:100vw;
+    height: 100vh;
     padding: 0%;
     margin: 0%;
+}
+
+header{
+    width: 100%;
+    height: fit-content;
 }
 
 * {
     box-sizing: border-box;
 }
 
+#sec1{
+    width:100%;
+    height: fit-content;
+}
 /* Navbar Styling  */
 .navbar {
     width: 100vw;
@@ -24,7 +35,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-    position: fixed;
+    position: sticky;
 }
 
 /* Navlogo  */
