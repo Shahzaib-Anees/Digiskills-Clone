@@ -54,3 +54,113 @@
 .banner-page-content>#para-2>span {
     color: var(--pri-color);
 }
+
+
+/* Form Section  */
+#contact-form-section {
+    width: 100%;
+    height: fit-content;
+    padding: 35px 100px;
+}
+
+
+#form-title {
+    padding: 10px 0px;
+}
+
+#form-title>h3 {
+    font-size: 2.2rem;
+    margin: 0%;
+    line-height: 50px;
+    font-family: var(--pri-font);
+}
+
+
+.form-content {
+    width: 100%;
+    height: 100%;
+    margin-top: 4px;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.form-content>.row-1 {
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-content>.row-1>.input-box {
+    color: #bbbbbb;
+    width: 100%;
+    height: 40px;
+    padding: 5px 12px;
+    font-size: 1.1rem;
+    font-family: var(--pri-font);
+    font-weight: 400;
+    border: 2px solid #bbbbbb;
+    outline: none;
+}
+
+.form-content>.row-1>.input-box:focus {
+    border: 2px solid rgb(97, 97, 255);
+}
+
+.form-content>.row-1>.select-box {
+    color: black;
+    width: 100%;
+    height: 40px;
+    padding: 5px 12px;
+    font-size: 1.1rem;
+    font-family: var(--pri-font);
+    font-weight: 400;
+    outline: none;
+}
+
+
+.form-content>.row-2 {
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+
+.form-content>.row-2>.input-box {
+    color: #bbbbbb;
+    width: 100%;
+    height: 40px;
+    padding: 5px 12px;
+    font-size: 1.1rem;
+    font-family: var(--pri-font);
+    font-weight: 400;
+    border: 2px solid #bbbbbb;
+    outline: none;
+}
+
+.form-content>.row-2>.input-box:focus {
+    border: 2px solid rgb(97, 97, 255);
+}
+
+#msg-box {
+    height: 150px;
+}
+
+.form-content>.row-2>#submit-button {
+    width: 100%;
+    height: 40px;
+    background-color: var(--pri-color);
+    border: none;
+    color: #fff;
+    padding: 5px 12px;
+    font-size: 1.2rem;
+    font-family: var(--pri-font);
+    font-weight: 600;
+}
