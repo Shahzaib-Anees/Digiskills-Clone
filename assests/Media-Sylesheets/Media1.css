@@ -51,14 +51,16 @@
         background-color: #f6f6f6;
         margin-left: 0;
     }
-    #sign_button>a{
+
+    #sign_button>a {
         color: var(--font-color);
         font-size: 17px;
     }
 
-    .search_icon2{
+    .search_icon2 {
         width: 40px;
         height: 40px;
+        color: #fff;
         background-color: var(--pri-color);
         display: flex;
         align-items: center;
@@ -67,27 +69,28 @@
         border-radius: 50%;
         box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
     }
-    
-    .search_icon2:hover{
+
+    .search_icon2:hover {
         color: #fff;
-        background-color:var(--font-color) ;
-        transition:background-color 0.4s ease-in;
+        background-color: var(--font-color);
+        transition: background-color 0.4s ease-in;
     }
-    
-    .mobile-nav{
+
+    .mobile-nav {
         width: fit-content;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 20px;
     }
-    #xmark{
+
+    #xmark {
         width: 100%;
-       display: flex;
-       font-size: 30px;
-       align-items: center;
-       justify-content: flex-end;
-       padding: 3px 20px; 
+        display: flex;
+        font-size: 30px;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 3px 20px;
     }
 
     #nav_bars {
@@ -97,5 +100,58 @@
         margin-top: 2px;
     }
 
+    /* Sec 2  */
+    #sec2 {
+        width: fit-content;
+        position: absolute;
+        left: 0px;
+        top: 77px;
+    }
 
+    .social_links {
+        width: 45px;
+        height: 50px;
+    }
+
+    #phone_link {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    #msg_link {
+        font-size: 0.8rem;
+        font-weight: 200;
+    }
+
+    #query_link {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+
+
+/* Media for Contact Page  */
+@media (min-width : 200px) and (max-width:900px) {
+
+    #contact-banner-sec {
+        width: 100vw;
+        height: 38vh;
+        background-image: url("./../Media/Backgrounds/contact.jpg");
+        background-size: cover;
+
+    }
+
+    .banner-page-title {
+        padding: 20px 65px;
+        margin-top: 4px;
+    }
+
+    .banner-page-content {
+        padding: 5px 25px;
+    }
+
+    .banner-page-content>#para-2 {
+        display: none;
+    }
 }
