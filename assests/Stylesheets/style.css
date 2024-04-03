@@ -29,12 +29,12 @@ header {
 .navbar {
     width: 100vw;
     height: fit-content;
-    padding: 14px 40px;
+    padding: 14px 35px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-    position: sticky;
+    position: static;
 }
 
 /* Navlogo  */
@@ -60,8 +60,7 @@ header {
     width: fit-content;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 25px;
+    gap: 12px;
 }
 
 .link {
@@ -75,7 +74,7 @@ header {
 .link>a {
     text-decoration: none;
     color: var(--font-color);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: var(--pri-font);
     font-weight: 600;
     line-height: 25px;

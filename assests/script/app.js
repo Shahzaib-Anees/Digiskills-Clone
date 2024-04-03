@@ -1,3 +1,5 @@
+
+// Hamburger Events 
 function hamburger() {
     let x = document.getElementById("nav_links");
     if (window.matchMedia(x.style.display === "none")) {
