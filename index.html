@@ -13,16 +13,26 @@
     <link rel="stylesheet" href="./assests/Media-Sylesheets/Media2.css">
 </head>
 
-<body >
-    <header>
-        <section id="sec1">
+<body onload="loader()">
+    <article id="preloader_html" style="display: none;">
+        <div class="preloader-inner">
+            <div class="static-dots"></div>
+            <div class="static-dots"></div>
+            <div class="static-dots"></div>
+        </div>
+        <div class="preloader-inner2">
+            <div class="dynamic-dots"></div>
+        </div>
+    </article>
+        <header>
+            <section id="sec1">
             <nav role="navigation">
                 <!-- Navbar  -->
                 <div class="navbar">
                     <div class="nav_logo">
                         <img src="./assests/Media/logo.webp" alt="logo">
                     </div>
-
+                    
                     <div id="nav_links">
                         <div id="xmark" onclick="hamburger_remover()">
                             <i class="fa-solid fa-xmark"></i>
@@ -114,5 +124,4 @@
     </main>
 </body>
 <script src="./assests/script/app.js"></script>
-
 </html>

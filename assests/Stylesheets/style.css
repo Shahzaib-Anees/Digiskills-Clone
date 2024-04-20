@@ -11,6 +11,97 @@ body {
     margin: 0%;
 }
 
+#preloader_html {
+    width: 110px;
+    /* border: 2px solid black; */
+    padding: 10px 15px;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* overflow: hidden; */
+}
+
+@keyframes static-dots-movement {
+    0% {
+        position: relative;
+        left: 0%;
+        z-index: 1;
+    }
+
+    20% {
+        left: 50%;
+    }
+
+    40% {
+        left: 100%;
+    }
+
+    60% {
+        left: -0%;
+    }
+
+    80% {
+        left: -50%;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes dynamic-dots-movement {
+    0%{
+        position: relative;
+        right: 0%;
+        z-index: -1;
+    }
+    20%{
+        right: 50%;
+    }
+    40%{
+        right: 100%;
+    }
+    60%{
+        right: 0px;
+    }
+    80%{
+        right: 50%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+.preloader-inner {
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+    animation: static-dots-movement 4s 0s linear infinite;
+}
+
+.preloader-inner>.static-dots {
+    width: 16px;
+    height: 16px;
+    background-color: var(--font-color);
+    border-radius: 50%;
+}
+
+.preloader-inner2 {
+    animation: dynamic-dots-movement 4s 0s linear infinite;
+}
+
+.preloader-inner2>.dynamic-dots {
+    width: 16px;
+    height: 16px;
+    background-color: var(--pri-color);
+    border-radius: 50%;
+    /* position: absolute; */
+}
+
 header {
     width: 100%;
     height: fit-content;
@@ -169,7 +260,7 @@ header {
 }
 
 .social_links {
-    width: 60px;
+    width: 53px;
     height: 70px;
     display: flex;
     align-items: center;
@@ -188,15 +279,15 @@ header {
 }
 
 #phone_link {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 }
 
 #msg_link {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 #query_link {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: 900;
 }
 
@@ -215,7 +306,7 @@ header {
 #link_cart>a {
     width: 100%;
     height: 100%;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 800;
     font-family: var(--pri-font);
     display: flex;
