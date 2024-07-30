@@ -1,7 +1,7 @@
 .slide_left{
     animation-name: slide_left_to_Right;
     animation-duration: 0.9s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
 }
 

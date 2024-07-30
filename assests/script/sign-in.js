@@ -31,7 +31,19 @@ const errorHandler = (error) => {
     })
 }
 
+const signInFormContainer = document.getElementById("sign-in-container");
+const registrationFormContainer = document.getElementById("reg-container");
 const signInForm = document.getElementById("sign_in_form");
+const registrationForm = document.getElementById("registration-form");
+const authHeader = document.getElementById("auth-header");
+const regPath = document.getElementById("registration-path");
+regPath.addEventListener("click", () => {
+    signInFormContainer.style.display = "none";
+    authHeader.style.display = "flex";
+    registrationFormContainer.style.display = "flex";
+    console.log("Registration Path Clicked");
+})
+
 signInForm.addEventListener("submit", (evt) => {
     evt.preventDefault();
     const submitBtn = document.getElementById("sign-in-btn");
@@ -63,5 +75,4 @@ signInForm.addEventListener("submit", (evt) => {
                 location.reload();
             }, 2000)
         })
-
 })
