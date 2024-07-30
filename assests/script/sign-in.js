@@ -45,6 +45,7 @@ signInForm.addEventListener("submit", (evt) => {
         return alert("Invalid User Credentials")
     }
     submitBtnText.innerText = `Processing`;
+    submitBtnTLoader.classList.add("rotate");
     submitBtnTLoader.style.display = "block";
 
     console.log(signInEmail, signInPassword);
