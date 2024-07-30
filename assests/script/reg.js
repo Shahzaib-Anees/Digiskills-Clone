@@ -7,14 +7,14 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD86pOHR7yFjlGf1z6E86Jm_j9TZcFWIwg",
-    authDomain: "digiskills-e1f44.firebaseapp.com",
-    projectId: "digiskills-e1f44",
-    storageBucket: "digiskills-e1f44.appspot.com",
-    messagingSenderId: "90066126392",
-    appId: "1:90066126392:web:4c84e3b6355b427d8688cd",
-    measurementId: "G-EB84SDCMTK"
-};
+    apiKey: "AIzaSyAWAifcM69HK0Khj_jjuHC3pnkD_54nlZM",
+    authDomain: "digiskills-96385.firebaseapp.com",
+    projectId: "digiskills-96385",
+    storageBucket: "digiskills-96385.appspot.com",
+    messagingSenderId: "595663190317",
+    appId: "1:595663190317:web:94792cff1ea5c85743fba4",
+    measurementId: "G-EHT4J866KM"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
