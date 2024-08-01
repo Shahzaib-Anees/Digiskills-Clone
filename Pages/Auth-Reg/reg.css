@@ -13,7 +13,7 @@
 .reg-banner-header {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -143,7 +143,7 @@
 #registration-form>label>input{
     height: 40px;
     padding: 5px 10px;
-    color: #DDDDDD;
+    color: #101010;
     border: 1px solid #DDDDDD;
     border-radius: 5px;
 }

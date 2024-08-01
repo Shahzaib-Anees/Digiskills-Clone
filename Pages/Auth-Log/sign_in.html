@@ -11,9 +11,19 @@
     <link rel="stylesheet" href="./sign_in.css">
     <link rel="stylesheet" href="./../../assests/Stylesheets/anim.css">
     <link rel="stylesheet" href="./../../assests/Stylesheets/style.css">
+    <link rel="stylesheet" href="./../../assests/Stylesheets/loaders.css">
 </head>
 
 <body>
+    <article id="loader">
+        <span id="loader-icon">
+            <i class="fa-solid fa-rotate-right"></i>
+        </span>
+        <div class="loader-text-container">
+            <span id="loader-dynamic-text">Registered Successfully</span>
+            <span id="loader-static-text">Please Wait</span>
+        </div>
+    </article>
     <article id="sign-in-container">
         <form id="sign_in_form">
             <div class="form-head">
@@ -52,11 +62,12 @@
                 </button>
                 <div class="form-othrs">
                     <p id="forg-pass">Forgot Password</p>
-                    <p id="registration-path">Not Registered ? Sign up</p>
+                    <a href="./../Auth-Reg/reg.html" id="registration-path">Not Registered ? Sign up</a>
                 </div>
             </div>
         </form>
     </article>
 </body>
 <script src="./../../assests/script/sign-in.js" type="module"></script>
+
 </html>

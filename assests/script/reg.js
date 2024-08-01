@@ -1,32 +1,26 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
-
-import {
-    getAuth,
-    createUserWithEmailAndPassword
-} from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyAWAifcM69HK0Khj_jjuHC3pnkD_54nlZM",
-    authDomain: "digiskills-96385.firebaseapp.com",
-    projectId: "digiskills-96385",
-    storageBucket: "digiskills-96385.appspot.com",
-    messagingSenderId: "595663190317",
-    appId: "1:595663190317:web:94792cff1ea5c85743fba4",
-    measurementId: "G-EHT4J866KM"
-  };
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+import { app, getAuth, createUserWithEmailAndPassword } from "./libs/firebase.js";
 const auth = getAuth(app);
+import { getFirestore, collection, addDoc, getDocs } from "./libs/firebase.js";
+const db = getFirestore(app);
+import { loader } from "./ext.js";
+const createNewUserInDataBase = async (firstName, lastName, email, password) => {
+    try {
+        const docRef = await addDoc(collection(db, "users"), {
+            FirstName: firstName,
+            LastName: lastName,
+            Email: email,
+            Password: password
+        });
+        console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+        console.error("Error adding document: ", e);
+    }
 
+}
 
-
+// Registration 
 const registrationForm = document.getElementById("registration-form");
-
-
-registrationForm.addEventListener("submit", (evt) => {
+registrationForm.addEventListener("submit", async (evt) => {
     evt.preventDefault();
     const regFirsName = document.getElementById("reg-first-name").value;
     const regLastName = document.getElementById("reg-last-name").value;
@@ -37,17 +31,28 @@ registrationForm.addEventListener("submit", (evt) => {
         return alert("Enter valid Informations")
     }
 
-    console.log(regFirsName , regLastName , regPassword);
-    createUserWithEmailAndPassword(auth, regEmail, regPassword)
-        .then((userCredential) => { 
-            const user = userCredential.user;
-            console.log(user);
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-
-            // ..
-        });
-
-})
+    const docLoader = document.getElementById("loader");
+    // Create User 
+    try {
+        const userCredential = await createUserWithEmailAndPassword(auth, regEmail, regPassword)
+        const user = userCredential.user;
+        console.log(user);
+        createNewUserInDataBase(regFirsName, regLastName, regEmail, regPassword);
+        console.log("New User in DataBase");
+        loader("Registered Successfully");
+        docLoader.style.display = "flex";
+    }
+    catch(error){
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode);
+        if (errorCode === "auth/email-already-in-use") {
+            return alert("Email is already in Use");
+        }
+    }finally{
+        setTimeout(()=>{
+            docLoader.style.display = "none";
+        },2000);
+    }
+    })
+console.log(db);

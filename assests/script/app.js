@@ -1,13 +1,3 @@
-// function loader(){
-//     let pre_loader=document.getElementById("preloader_html");
-//     if(pre_loader.style.display === "none"){
-//         pre_loader.style.display = "flex";
-//         console.log("Pre Loader Loaded");
-//     }else{
-//         console.log("Pre Loader Failed");
-//     }
-// }
-
 // Hamburger Events 
 const hamburger = () => {
     let x = document.getElementById("nav_links");
@@ -30,7 +20,6 @@ const hamburger_remover = () => {
         console.log("False")
     }
 }
-
 // Mouse Over Function for Extra Links
 // function box_visibility(){
 //     let box = document.getElementById("link_cart")
@@ -41,4 +30,3 @@ const hamburger_remover = () => {
 //         console.log("Failed");
 //     }
 // }
-
