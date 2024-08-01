@@ -54,6 +54,7 @@ signInForm.addEventListener("submit",async (evt) => {
     }finally{
         setTimeout(()=>{
             docLoader.style.display = "none";
+            location.assign("./../Profile/profile.html")
         },2000);
     }
 })

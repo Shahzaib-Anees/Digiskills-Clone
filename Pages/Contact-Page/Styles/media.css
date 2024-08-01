@@ -1,0 +1,53 @@
+
+/* Media for Contact Page  */
+@media (min-width : 200px) and (max-width:900px) {
+
+    #contact-banner-sec {
+        width: 100vw;
+        height: 38vh;
+        background-image: url("./../Media/Backgrounds/contact.jpg");
+        background-size: cover;
+
+    }
+
+    .banner-page-title {
+        padding: 20px 65px;
+        margin-top: 4px;
+    }
+
+    .banner-page-content {
+        padding: 5px 25px;
+    }
+
+    .banner-page-content>#para-2 {
+        display: none;
+    }
+
+    /* Form Section  */
+    #contact-form-section {
+        padding: 25px 20px;
+    }
+
+    #form-title {
+        padding: 2px 0px;
+    }
+
+    #form-title>h3 {
+        font-size: 1.7rem;
+    }
+
+    .form-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-content>.row-1 {
+        width: 100%;
+    }
+
+    .form-content>.row-2 {
+        width: 100%;
+    }
+
+
+}

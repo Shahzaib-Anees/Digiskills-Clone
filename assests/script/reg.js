@@ -52,6 +52,7 @@ registrationForm.addEventListener("submit", async (evt) => {
     }finally{
         setTimeout(()=>{
             docLoader.style.display = "none";
+            location.href("./../Profile/profile.html")
         },2000);
     }
     })
