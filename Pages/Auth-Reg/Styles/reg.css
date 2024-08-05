@@ -5,7 +5,7 @@
 #reg-banner {
     width: 100vw;
     height: 46vh;
-    background-image: url("./../../assests/Media/Backgrounds/reg1.jpg");
+    background-image: url("./../../../assests/Media/Backgrounds/reg1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -164,6 +164,66 @@
     padding: 8px 10px;
 }
 
+#registration-form>button>#rotater{
+    font-size: 18px;
+}
+
 @media (min-width:200px) and (max-width : 1000px){
 
+}
+
+#pop-up-window{
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    padding: 20px 40px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: none;
+}
+
+
+#pop-up-window>#popup-text{
+    font-family: var(--pri-font);
+    font-size: 27px;
+    color: #101010;
+    font-weight: 900;
+    line-height: 50px;
+    letter-spacing: 1px;
+}
+
+#pop-up-window>button{
+    border: none;
+    outline: none;
+    background-color: var(--pri-color);
+    padding: 10px 20px;
+    font-family: var(--pri-font);
+    font-size: 18px;
+    color: #ffff;
+    font-weight: 800;
+    border-radius: 10px;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+#pop-up-window>button:hover{
+    scale: 1.1;
+    transition: scale 0.5s linear;
+}
+
+#rotater{
+    display: none;
+} 
+
+.fade {
+    filter: grayscale(0.3);
 }

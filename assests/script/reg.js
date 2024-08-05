@@ -1,17 +1,48 @@
 import { app, getAuth, createUserWithEmailAndPassword } from "./libs/firebase.js";
 const auth = getAuth(app);
-import { getFirestore, collection, addDoc, getDocs } from "./libs/firebase.js";
+import { getFirestore, collection, addDoc, getDocs, setDoc, doc } from "./libs/firebase.js";
 const db = getFirestore(app);
 import { loader } from "./ext.js";
-const createNewUserInDataBase = async (firstName, lastName, email, password) => {
+
+
+// Dom Requisites 
+const signUpBtn = document.getElementById("sign-up-btn");
+const signUpBtnRotater = document.getElementById("rotater");
+const signUpBtnText = document.getElementById("sign-up-btn-txt")
+
+// PopUp 
+const popUp = (popUpState, errorCode = "An Unknown error occured") => {
+    const popUpWindow = document.getElementById("pop-up-window");
+    const popUpText = document.getElementById("popup-text");
+    const popUpBtn = document.getElementById("pop-up-btn");
+    if (popUpState === "registered") {
+        popUpText.innerText = "Registered Successfully !";
+        popUpBtn.innerText = "Go to Log In";
+        popUpBtn.addEventListener("click", () => {
+            location.replace("./../Auth-Log/sign_in.html")
+        })
+    } else if (popUpState === "error") {
+        popUpText.innerText = errorCode;
+        popUpBtn.innerText = "Retry";
+        popUpBtn.style.backgroundColor = "red";
+        popUpBtn.addEventListener("click", () => {
+            location.reload();
+        })
+    } else {
+        console.log("Failed to execute Pop Up function");
+    }
+    popUpWindow.style.display = "flex";
+}
+
+const createNewUserInDataBase = async (uid, firstName, lastName, email, password) => {
     try {
-        const docRef = await addDoc(collection(db, "users"), {
-            FirstName: firstName,
-            LastName: lastName,
-            Email: email,
-            Password: password
+        await setDoc(doc(db, "users", uid), {
+            firstName,
+            lastName,
+            email,
+            password,
         });
-        console.log("Document written with ID: ", docRef.id);
+        console.log("Document written with ID: ", uid);
     } catch (e) {
         console.error("Error adding document: ", e);
     }
@@ -22,6 +53,11 @@ const createNewUserInDataBase = async (firstName, lastName, email, password) => 
 const registrationForm = document.getElementById("registration-form");
 registrationForm.addEventListener("submit", async (evt) => {
     evt.preventDefault();
+    signUpBtnRotater.classList.add("rotate");
+    signUpBtnRotater.style.display = "inline-block";
+    signUpBtnText.innerText = "Processing ..."
+    signUpBtn.setAttribute("disabled", "true");
+    signUpBtn.classList.add("fade");
     const regFirsName = document.getElementById("reg-first-name").value;
     const regLastName = document.getElementById("reg-last-name").value;
     const regEmail = document.getElementById("reg-email").value;
@@ -36,24 +72,24 @@ registrationForm.addEventListener("submit", async (evt) => {
     try {
         const userCredential = await createUserWithEmailAndPassword(auth, regEmail, regPassword)
         const user = userCredential.user;
+        const userId = user.uid;
         console.log(user);
-        createNewUserInDataBase(regFirsName, regLastName, regEmail, regPassword);
+        createNewUserInDataBase(userId, regFirsName, regLastName, regEmail, regPassword);
         console.log("New User in DataBase");
         loader("Registered Successfully");
         docLoader.style.display = "flex";
-        location.replace("./Auth-Log/sign_in.html")
+        popUp("registered");
     }
-    catch(error){
+    catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
         console.log(errorCode);
-        if (errorCode === "auth/email-already-in-use") {
-            return alert("Email is already in Use");
-        }
-    }finally{
-        setTimeout(()=>{
+        popUp("error", errorCode);
+    } finally {
+        setTimeout(() => {
             docLoader.style.display = "none";
-        },2000);
+        }, 2000);
     }
-    })
+})
 console.log(db);
