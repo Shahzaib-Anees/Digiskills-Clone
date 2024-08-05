@@ -41,6 +41,7 @@ registrationForm.addEventListener("submit", async (evt) => {
         console.log("New User in DataBase");
         loader("Registered Successfully");
         docLoader.style.display = "flex";
+        location.replace("./Auth-Log/sign_in.html")
     }
     catch(error){
         const errorCode = error.code;
@@ -52,7 +53,6 @@ registrationForm.addEventListener("submit", async (evt) => {
     }finally{
         setTimeout(()=>{
             docLoader.style.display = "none";
-            location.href("./../Profile/profile.html")
         },2000);
     }
     })

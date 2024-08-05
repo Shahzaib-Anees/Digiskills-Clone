@@ -1,9 +1,9 @@
 // Hamburger Events 
 const hamburger = () => {
-    let x = document.getElementById("nav_links");
-    window.matchMedia(x.classList.add("slide_left"))
-    if (window.matchMedia(x.style.display === "none")) {
-        x.style.display = "flex";
+    let navLinks = document.getElementById("nav_links");
+    window.matchMedia(navLinks.classList.add("slide_in_left"))
+    if (window.matchMedia(navLinks.style.display === "none")) {
+        navLinks.style.display = "flex";
         console.log("True")
     } else {
         console.log("False")
@@ -12,9 +12,9 @@ const hamburger = () => {
 }
 
 const hamburger_remover = () => {
-    let y = document.getElementById("nav_links");
-    if (y.style.display === "flex") {
-        window.matchMedia(y.style.display = "none");
+    let navLinks = document.getElementById("nav_links");
+    if (navLinks.style.display === "flex") {
+        window.matchMedia(navLinks.style.display = "none");
         console.log("removed")
     } else {
         console.log("False")

@@ -44,6 +44,7 @@ signInForm.addEventListener("submit",async (evt) => {
         console.log("user signed in");
         loader("Signed In Successfully");
         docLoader.style.display = "flex";
+        location.replace("./../Profile/profile.html");
     } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -54,7 +55,6 @@ signInForm.addEventListener("submit",async (evt) => {
     }finally{
         setTimeout(()=>{
             docLoader.style.display = "none";
-            location.assign("./../Profile/profile.html")
         },2000);
     }
 })

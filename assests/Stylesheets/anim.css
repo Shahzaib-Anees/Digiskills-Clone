@@ -1,4 +1,4 @@
-.slide_left{
+.slide_in_left {
     animation-name: slide_left_to_Right;
     animation-duration: 0.9s;
     animation-iteration-count: 1;
@@ -29,5 +29,56 @@
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+.slide_in_right {
+    animation-name: slide_right_to_left;
+    animation-duration: 0.9s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slide_right_to_left {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 0%;
+    }
+}
+
+.slide_out_left {
+    animation-name: slideOutLeft;
+    animation-duration: 0.9s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideOutLeft {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+.slide_out_right {
+    animation-name: slideOutRight;
+    animation-duration: 0.9s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideOutRight {
+    0% {
+        right: 0%;
+    }
+
+    100% {
+        right: -100%;
     }
 }
