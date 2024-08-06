@@ -1,8 +1,13 @@
-import { app, getAuth, createUserWithEmailAndPassword } from "./libs/firebase.js";
-const auth = getAuth(app);
-import { getFirestore, collection, addDoc, getDocs, setDoc, doc } from "./libs/firebase.js";
-const db = getFirestore(app);
+import { auth, createUserWithEmailAndPassword } from "./libs/firebase.js";
+
+import { setDoc, doc , db } from "./libs/firebase.js";
 import { loader } from "./ext.js";
+
+
+// OnLoad 
+// document.body.addEventListener("load", () => {
+//     skillyRobo("../assests/Media/digiskills-robot.png", "reg-container");
+// })
 
 
 // Dom Requisites 
@@ -24,7 +29,7 @@ const popUp = (popUpState, errorCode = "An Unknown error occured") => {
     } else if (popUpState === "error") {
         popUpText.innerText = errorCode;
         popUpBtn.innerText = "Retry";
-        popUpBtn.style.backgroundColor = "red";
+        popUpBtn.style.backgroundColor = "#ED4337";
         popUpBtn.addEventListener("click", () => {
             location.reload();
         })
@@ -34,13 +39,14 @@ const popUp = (popUpState, errorCode = "An Unknown error occured") => {
     popUpWindow.style.display = "flex";
 }
 
-const createNewUserInDataBase = async (uid, firstName, lastName, email, password) => {
+const createNewUserInDataBase = async (uid, firstName, lastName, email, password , imageUrl="https://firebasestorage.googleapis.com/v0/b/digiskills-96385.appspot.com/o/user-profile-collection%2Fmale_avatar-removebg-preview.png?alt=media&token=d6d4aa87-11c0-4288-9b2c-8cfeabb4bfb3") => {
     try {
         await setDoc(doc(db, "users", uid), {
             firstName,
             lastName,
             email,
             password,
+            imageUrl,
         });
         console.log("Document written with ID: ", uid);
     } catch (e) {

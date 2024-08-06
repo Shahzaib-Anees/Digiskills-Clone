@@ -1,10 +1,11 @@
-
 /* Media for Sign Up Page  */
 @media (min-width : 200px) and (max-width:900px) {
     #reg-form-section>h3 {
         text-align: center;
-        margin: 16px 0px;
-        font-weight: 800;
+        margin: 10px 0px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        word-spacing: 2px;
     }
 
     #reg-banner {
@@ -37,7 +38,7 @@
         flex-direction: column;
         justify-content: center;
     }
-    
+
     #reg-form-section>h3 {
         font-size: 25px;
     }
@@ -51,8 +52,21 @@
     #registration-form {
         width: 100%;
     }
-    
+
     #registration-form>label>input {
         width: 100%;
     }
+
+    #pop-up-window {
+        width: 80vw;
+        padding: 15px 20px;
+    }
+
+    #pop-up-window>#popup-text {
+        font-size: 22px;
+        text-align: center;
+        line-height: 30px;
+        letter-spacing: 1px;
+    }
+
 }

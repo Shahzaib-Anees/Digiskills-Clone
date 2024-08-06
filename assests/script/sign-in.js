@@ -1,7 +1,21 @@
-import { app, getAuth, signInWithEmailAndPassword } from "./libs/firebase.js"
+import { auth, signInWithEmailAndPassword, onAuthStateChanged } from "./libs/firebase.js"
 import { loader } from "./ext.js";
 
-const auth = getAuth(app);
+
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        const uid = user.uid;
+        localStorage.setItem("currentUser", `${uid}`)
+        // ...
+    } else {
+        // User is signed out
+        console.log("No User Logged In");
+        // ...
+    }
+});
+
+
 
 // Doms 
 const errorHandler = (error) => {
@@ -20,7 +34,7 @@ const signInForm = document.getElementById("sign_in_form");
 const regPath = document.getElementById("registration-path");
 const docLoader = document.getElementById("loader");
 
-signInForm.addEventListener("submit",async (evt) => {
+signInForm.addEventListener("submit", async (evt) => {
     evt.preventDefault();
     const submitBtn = document.getElementById("sign-in-btn");
     submitBtn.disabled = true;
@@ -40,8 +54,6 @@ signInForm.addEventListener("submit",async (evt) => {
     try {
         const userCredential = await signInWithEmailAndPassword(auth, signInEmail, signInPassword)
         const user = userCredential.user;
-        console.log(user);
-        console.log("user signed in");
         loader("Signed In Successfully");
         docLoader.style.display = "flex";
         location.replace("./../Profile/profile.html");
@@ -52,9 +64,9 @@ signInForm.addEventListener("submit",async (evt) => {
         setTimeout(() => {
             location.reload();
         }, 2000)
-    }finally{
-        setTimeout(()=>{
+    } finally {
+        setTimeout(() => {
             docLoader.style.display = "none";
-        },2000);
+        }, 2000);
     }
 })

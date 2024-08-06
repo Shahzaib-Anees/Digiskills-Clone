@@ -13,16 +13,19 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebas
 // Firebase Auth 
 import {
     getAuth,
+    onAuthStateChanged,
     createUserWithEmailAndPassword,
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    signOut
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+
 
 // FireBase DataBase 
 import {
     getFirestore,
     collection,
     addDoc,
-    getDocs,
+    getDoc,
     setDoc,
     doc
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
@@ -30,6 +33,8 @@ import {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+const auth = getAuth(app);
+const db = getFirestore(app);
 
 
-export { app, getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, getFirestore, collection, addDoc, getDocs ,setDoc ,doc}
+export { auth, db, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, getFirestore, collection, addDoc, getDoc, setDoc, doc, signOut }

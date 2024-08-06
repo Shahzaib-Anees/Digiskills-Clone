@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="./main/Styles/profile.css">
     <link rel="stylesheet" href="./main/Styles/Media.css">
     <link rel="stylesheet" href="./../../assests/Stylesheets/anim.css">
+    <link rel="stylesheet" href="./../../assests/Stylesheets/loaders.css">
     <link rel="icon" type="img/gif" href="./../../assests/Media/thumbnail-web.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body id="body">
     <header>
         <nav role="navigation">
             <article id="row-nav">
@@ -37,8 +38,32 @@
                 </div>
                 <div class="row2">
                     <div id="profile">
-                        <div class="profile-img">
-                            <img src="./../../assests/Media/male_avatar-removebg-preview.png" alt="">
+                        <div class="profile-img" onclick="showProfilePannel()">
+                            <img src="./main/Media/male_avatar-removebg-preview.png" alt="">
+                        </div>
+
+                        <div id="profile-pannel">
+                            <div id="profile-content">
+                                <img src="./main/Media/male_avatar-removebg-preview.png" alt="Picture">
+                                <span id="profile-name">
+                                
+                                </span>
+                                <span id="profile-email">
+                                    
+                                </span>
+                                <span id="dstp-batch-name">
+                                    DSTP-1.0-Batch-01
+                                </span>
+                            </div>
+                            <div class="profile-nav-spc">
+                                <a href="#" id="profile-path">
+                                    My Profile
+                                </a>
+                                <a href="#" id="sign-out">
+                                    Sign Out
+                                </a>
+
+                            </div>
                         </div>
                         <div id="user-profile-name-cont">
                             <span id="user-profile-name">
@@ -100,9 +125,18 @@
     </header>
 
     <main id="main-sec">
-
+        <article id="loader">
+            <span id="loader-icon">
+                <i class="fa-solid fa-rotate-right"></i>
+            </span>
+            <div class="loader-text-container">
+                <span id="loader-dynamic-text">Registered Successfully</span>
+                <span id="loader-static-text">Please Wait</span>
+            </div>
+        </article>
     </main>
 </body>
 <script src="./main/script/profile.js"></script>
+<script src="./main/script/script.js" type="module"> </script>
 
 </html>

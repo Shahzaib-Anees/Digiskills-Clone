@@ -20,6 +20,7 @@ const hamburger_remover = () => {
         console.log("False")
     }
 }
+
 // Mouse Over Function for Extra Links
 // function box_visibility(){
 //     let box = document.getElementById("link_cart")

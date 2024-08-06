@@ -75,7 +75,7 @@ body {
 #profile {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 #profile>.profile-img {
@@ -89,7 +89,9 @@ body {
 
 #profile>#user-profile-name-cont {
     font-size: 18px;
+    font-family: var(--pri-font);
     letter-spacing: 2px;
+    font-weight: 800;
 }
 
 
@@ -192,3 +194,57 @@ body {
     font-weight: 400;
 }
 
+/* Profile Pannel */
+#profile-pannel{
+   position: absolute;
+   right: 0.5%;
+   top: 9%;
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+   justify-content: center;
+   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+   display: none;
+}
+
+#profile-pannel>#profile-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 15px 25px;
+    background-color: #1C2529;
+}
+
+#profile-pannel>#profile-content>img{
+    width: 35%;
+    margin: 10px 0px;
+}
+
+#profile-pannel>#profile-content>span{
+    font-size: 16px;
+    font-family: var(--pri-font);
+    font-weight: 600;
+    color: #d5d5d5;
+}
+
+#profile-pannel>.profile-nav-spc{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f5f4f4;
+}
+
+#profile-pannel>.profile-nav-spc>a{
+    padding: 8px 10px;
+    background-color: var(--pri-color);
+    text-decoration: none;
+    color: #101010;
+    font-family: var(--pri-font);
+    font-weight: 800;
+    font-size: 14px;
+    border-radius: 2px;
+}
