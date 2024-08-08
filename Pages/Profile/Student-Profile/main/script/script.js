@@ -1,6 +1,6 @@
-import { auth, signOut, doc, getDoc, db } from "../../../../assests/script/libs/firebase.js";
+import {auth , signOut , doc, getDoc, db } from "../../../../../assests/script/libs/firebase.js";
 
-import { loader } from "../../../../assests/script/ext.js";
+import { loader } from "../../../../../assests/script/ext.js";
 
 const signOutBtn = document.getElementById("sign-out");
 const userProfileNameNav = document.getElementById("user-profile-name");
@@ -9,6 +9,7 @@ let currentUser = localStorage.getItem("currentUser");
 const getUserData = async () => {
     const userProfileNameDom = document.getElementById("profile-name")
     const userProfileEmailDom = document.getElementById("profile-email");
+    
     const docRef = doc(db, "users", currentUser);
     const docSnap = await getDoc(docRef);
 
@@ -31,7 +32,7 @@ signOutBtn.addEventListener("click", () => {
         localStorage.removeItem("currentUser");
         loader("Sign Out Successfully");
         setTimeout(() => {
-            location.replace("../Auth-Log/sign_in.html")
+            location.replace("../../Auth-Log/sign_in.html")
         }, 2000)
     }).catch((error) => {
         console.log(error);

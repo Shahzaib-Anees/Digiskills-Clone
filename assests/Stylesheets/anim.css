@@ -82,3 +82,20 @@
         right: -100%;
     }
 }
+
+
+.slide-width-grow{
+    animation-name: grow-width;
+    animation-duration: 0.3ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}
+
+@keyframes grow-width{
+    0%{
+        width: 40%;
+    }
+    100%{
+        width: fit-content;
+    }
+}

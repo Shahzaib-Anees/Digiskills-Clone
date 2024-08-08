@@ -60,10 +60,16 @@
     .gears-pannel {
         font-size: 20px;
     }
+
+    #col-nav-cont {
+        position: absolute;
+        display: none;
+    }
+
 }
 
 
-@media(min-width : 800px) and (max-width : 1220px){
+@media(min-width : 800px) and (max-width : 1220px) {
     #user-profile-name-cont {
         display: none;
     }
@@ -81,4 +87,5 @@
         justify-content: center;
         padding: 2px 3px;
     }
+
 }

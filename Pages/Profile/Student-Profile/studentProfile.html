@@ -8,12 +8,173 @@
         LMS DigiSkills | Learning Management System</title>
     <link rel="stylesheet" href="../main/Styles/profile.css">
     <link rel="stylesheet" href="../main/Styles/Media.css">
+    <link rel="stylesheet" href="../../../assests/Stylesheets/loaders.css">
     <link rel="stylesheet" href="./main/styles/userProfile.css">
+    <link rel="stylesheet" href="../../../assests/Stylesheets/anim.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body id="body">
+    <header>
+        <nav role="navigation">
+            <article id="row-nav">
+                <div id="bars-sml-hidden-icn" class="bars" onclick="showmobNav()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="row1">
+                    <div id="bars-lge-view" class="bars" onclick="showFullNav()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="nav-head-spc">
+                        <div class="nav-logo">
+                            <img src="../../../assests/Media/default-digiskills.png" alt="logo">
+                        </div>
+                        <div class="heading">
+                            <h1> Learning Management System</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row2">
+                    <div id="profile">
+                        <div class="profile-img" onclick="showProfilePannel()">
+                            <img src="../main/Media/male_avatar-removebg-preview.png" alt="">
+                        </div>
 
+                        <div id="profile-pannel">
+                            <div id="profile-content">
+                                <img id="profile-img" src="../main/Media/male_avatar-removebg-preview.png"
+                                    alt="Picture">
+                                <span id="profile-name">
+
+                                </span>
+                                <span id="profile-email">
+
+                                </span>
+                                <span id="dstp-batch-name">
+                                    DSTP-1.0-Batch-01
+                                </span>
+                            </div>
+                            <div class="profile-nav-spc">
+                                <a href="#" id="profile-path">
+                                    My Profile
+                                </a>
+                                <a href="#" id="sign-out">
+                                    Sign Out
+                                </a>
+
+                            </div>
+                        </div>
+                        <div id="user-profile-name-cont">
+                            <span id="user-profile-name">
+                                Mohammad Shahzaib
+                            </span>
+                        </div>
+                    </div>
+                    <a class="gears-pannel" onclick="showPannel()">
+                        <i class="fa-solid fa-gears"></i>
+                    </a>
+                    <div id="pannel-cont">
+                        <div id="pannel">
+                            <div class="icon">
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+                            <div class="modify-pass">
+                                <a href="#">Change Password</a>
+                            </div>
+                            <div class="skins-pannel">
+                                <p class="custom-para">Apply Custom Skins</p>
+                                <div class="skins-cont">
+                                    <a href="#" onclick="changeSkinColor('#f69223')" class="skin-picker-pannel">
+                                        <img src="../main/Media/pickers-pannel-1.jpg">
+                                        <span>Orangutan Orange</span>
+                                    </a>
+                                    <a href="#" onclick="changeSkinColor('#f69223')" class="skin-picker-pannel">
+                                        <img src="../main/Media/pickers-pannel-2.jpg">
+                                        <span>Colorate Gray</span>
+                                    </a>
+                                    <a href="#" onclick="changeSkinColor('#f69223')" class="skin-picker-pannel">
+                                        <img src="../main/Media/pickers-pannel-3.jpg">
+                                        <span>Patina Green</span>
+                                    </a>
+                                    <a href="#" onclick="changeSkinColor('#f69223')" class="skin-picker-pannel">
+                                        <img src="../main/Media/pickers-pannel-4.jpg">
+                                        <span>Brown Boots</span>
+                                    </a>
+                                    <a href="#" onclick="changeSkinColor('#f69223')" class="skin-picker-pannel">
+                                        <img src="../main/Media/pickers-pannel-5.jpg">
+                                        <span>Cyan Blue</span>
+                                    </a>
+                                </div>
+                                <!-- <div class="notify-check">
+                                <p class="custom-para">Notification Preference</p>
+                                <div class="prefernce-opt-cont">
+                                    <div class="prefernce-opt">
+                                        <input type="checkbox">
+
+                                    </div>
+
+                                </div>
+                            </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </nav>
+    </header>
+    <main>
+        <article id="loader">
+            <span id="loader-icon">
+                <i class="fa-solid fa-rotate-right"></i>
+            </span>
+            <div class="loader-text-container">
+                <span id="loader-dynamic-text">Registered Successfully</span>
+                <span id="loader-static-text">Please Wait</span>
+            </div>
+        </article>
+
+        <section id="sec-1">
+            <article id="col-nav-cont">
+                <article id="col-nav">
+                    <a href="" class="col-nav-item" onmouseenter="colNavItemEnter(this)"
+                        onmouseleave="colNavItemLeave(this)">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <p class="col-nav-txt">Home</p>
+                        <p class="col-hidden-txt" style="display: none;">Home</p>
+                    </a>
+                    <a href="" class="col-nav-item" onmouseenter="colNavItemEnter(this)"
+                        onmouseleave="colNavItemLeave(this)">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="col-nav-txt">My Profile</p>
+                        <p class="col-hidden-txt" style="display: none;">My Profile</p>
+                    </a>
+                    <a href="" class="col-nav-item" onmouseenter="colNavItemEnter(this)"
+                        onmouseleave="colNavItemLeave(this)">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <p class="col-nav-txt">Progress Timeline</p>
+                        <p class="col-hidden-txt" style="display: none;">Progress Timeline</p>
+                    </a>
+                    <a href="" class="col-nav-item" onmouseenter="colNavItemEnter(this)"
+                        onmouseleave="colNavItemLeave(this)">
+                        <i class="fa-solid fa-book"></i>
+                        <p class="col-nav-txt">My Notes</p>
+                        <p class="col-hidden-txt" style="display: none;">My Notes</p>
+                    </a>
+                    <a href="" class="col-nav-item" onmouseenter="colNavItemEnter(this)"
+                        onmouseleave="colNavItemLeave(this)">
+                        <i class="fa-solid fa-life-ring"></i>
+                        <p class="col-nav-txt">Online Support </p>
+                        <p class="col-hidden-txt" style="display: none;">Online Support</p>
+                    </a>
+                </article>
+            </article>
+        </section>
+    </main>
 </body>
+<script src="../main/script/profile.js"></script>
 <script src="./main/script/studentProfile.js"></script>
+<script src="./main/script/script.js" type="module"></script>
 
 </html>

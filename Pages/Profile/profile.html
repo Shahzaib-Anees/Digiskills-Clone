@@ -20,11 +20,11 @@
     <header>
         <nav role="navigation">
             <article id="row-nav">
-                <div id="bars-sml-hidden-icn" class="bars">
+                <div id="bars-sml-hidden-icn" class="bars" onclick="showmobNav()">
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <div class="row1">
-                    <div id="bars-lge-view" class="bars">
+                    <div id="bars-lge-view" class="bars" onclick="showFullNav()">
                         <i class="fa-solid fa-bars"></i>
                     </div>
                     <div class="nav-head-spc">
@@ -46,17 +46,17 @@
                             <div id="profile-content">
                                 <img src="./main/Media/male_avatar-removebg-preview.png" alt="Picture">
                                 <span id="profile-name">
-                                
+
                                 </span>
                                 <span id="profile-email">
-                                    
+
                                 </span>
                                 <span id="dstp-batch-name">
                                     DSTP-1.0-Batch-01
                                 </span>
                             </div>
                             <div class="profile-nav-spc">
-                                <a href="#" id="profile-path">
+                                <a href="./Student-Profile/studentProfile.html" id="profile-path">
                                     My Profile
                                 </a>
                                 <a href="#" id="sign-out">
@@ -134,6 +134,44 @@
                 <span id="loader-static-text">Please Wait</span>
             </div>
         </article>
+
+        <!-- Sec 1 -->
+        <section id="sec-1">
+            <article id="col-nav-cont">
+                <article id="col-nav">
+                    <a href="#" class="col-nav-item" onmouseenter="colNavItemEnter(this)"
+                        onmouseleave="colNavItemLeave(this)">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <p class="col-nav-txt">Home</p>
+                    </a>
+                    <a href="#" class="col-nav-item" onmouseenter="colNavItemEnter(this)"
+                        onmouseleave="colNavItemLeave(this)">
+                        <i class="fa-solid fa-user"></i>
+                        <p class="col-nav-txt">My Profile</p>
+                    </a>
+                    <a href="#" class="col-nav-item" onmouseenter="colNavItemEnter(this)"
+                        onmouseleave="colNavItemLeave(this)">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <p class="col-nav-txt">Progress Timeline</p>
+                    </a>
+                    <a href="#" class="col-nav-item" onmouseenter="colNavItemEnter(this)"
+                        onmouseleave="colNavItemLeave(this)">
+                        <i class="fa-solid fa-book"></i>
+                        <p class="col-nav-txt">My Notes</p>
+                    </a>
+                    <a href="#" class="col-nav-item" onmouseenter="colNavItemEnter(this)"
+                        onmouseleave="colNavItemLeave(this)">
+                        <i class="fa-solid fa-life-ring"></i>
+                        <p class="col-nav-txt">Online Support </p>
+                    </a>
+                </article>
+            </article>
+        </section>
+        <section id="sec-2">
+            <article id="profile-dashboard">
+
+            </article>
+        </section>
     </main>
 </body>
 <script src="./main/script/profile.js"></script>
