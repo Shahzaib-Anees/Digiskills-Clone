@@ -80,11 +80,6 @@ body {
     width: fit-content;
 }
 
-#profile>.profile-img>img {
-    width: 100%;
-}
-
-
 #profile>#user-profile-name-cont {
     font-size: 18px;
     font-family: var(--pri-font);
@@ -94,7 +89,7 @@ body {
 
 
 #profile>.profile-img>img {
-    width: 50px;
+    width: 30px;
 }
 
 
@@ -292,7 +287,7 @@ body {
 }
 
 .col-nav-txt {
-    width: 12vw;
+    width: 160px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -318,7 +313,7 @@ body {
 
 
 .flex-start-txt {
-    width: 12vw;
+    width: 160px;
     display: flex;
     align-items: center;
     justify-content: flex-start;

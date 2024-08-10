@@ -4,9 +4,17 @@ const loader = (loadState) => {
     const loaderText = document.getElementById("loader-dynamic-text");
     loaderText.innerText = loadState;
     loaderIcn.classList.add("rotate");
-    loader.style.display="flex";
+    loader.style.display = "flex";
 }
 
+
+const pageLoader = (parentContainerId) => {
+    const pageLoader = `<div id = "page-loader">
+       <i class="fa-solid fa-rotate"></i>
+    </div>`
+
+    document.getElementById(`${parentContainerId}`).appendChild(pageLoader);
+}
 
 // const skillyRobo = (pageImgUrl, parentContainerId) => {
 //     const roboContainer = `<div class = robo-cont>
@@ -21,4 +29,4 @@ const loader = (loadState) => {
 //     document.getElementById(`${parentContainerId}`).appendChild(roboContainer);
 // }
 
-export { loader /*, skillyRobo*/ };
+export { loader , pageLoader /*, skillyRobo*/ };

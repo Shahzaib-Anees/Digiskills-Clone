@@ -1,8 +1,4 @@
 let sideClickCount = 0;
-
-document.body.addEventListener("load", () => {
-
-})
 const showPannel = () => {
     sideClickCount++;
     const pannelCont = document.getElementById("pannel-cont");

@@ -36,3 +36,13 @@
     color: #b8b8b8;
     font-weight: 800;
 }
+
+#page-loader{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 20px;
+    color: #243034;
+    font-weight: 500;
+}

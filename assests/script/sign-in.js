@@ -5,6 +5,12 @@ import { loader } from "./ext.js";
 
 onAuthStateChanged(auth, (user) => {
     if (user) {
+        if (localStorage.getItem("currentUser") !== null) {
+            let alreadyLoggedUser = localStorage.getItem("currentUser");
+            location.replace("../Profile/profile.html"
+            )
+            return;
+        }
         const uid = user.uid;
         localStorage.setItem("currentUser", `${uid}`)
         // ...
