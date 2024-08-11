@@ -63,6 +63,7 @@
 
     #col-nav-cont {
         position: absolute;
+        z-index: 2;
         display: none;
     }
 

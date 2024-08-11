@@ -1,0 +1,22 @@
+@media(min-width:200px) and (max-width:900px){
+    #profile-main-cont {
+        padding: 10px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    #profile-main-cont>h3{
+        font-size: 26px;
+    }
+    .profile-container{
+        width: 100%;
+    }
+
+    .main-profile-info-sec{
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
