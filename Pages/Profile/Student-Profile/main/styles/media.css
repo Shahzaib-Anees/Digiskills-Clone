@@ -14,9 +14,23 @@
     }
 
     .main-profile-info-sec{
-        width: 95vw;
+        width: 97vw;
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+}
+
+@media(min-width: 800px) and (max-width:900px){
+    .main-profile-info-sec{
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        gap: 10px;
+    }
+    .profile-container{
+        width: 80%;
     }
 }
