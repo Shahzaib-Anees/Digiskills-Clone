@@ -39,7 +39,7 @@ const popUp = (popUpState, errorCode = "An Unknown error occured") => {
     popUpWindow.style.display = "flex";
 }
 
-const createNewUserInDataBase = async (uid, firstName, lastName, email, password , imageUrl="https://firebasestorage.googleapis.com/v0/b/digiskills-96385.appspot.com/o/user-profile-collection%2Fmale_avatar-removebg-preview.png?alt=media&token=d6d4aa87-11c0-4288-9b2c-8cfeabb4bfb3") => {
+const createNewUserInDataBase = async (uid, firstName, lastName, email, password , imageUrl="https://firebasestorage.googleapis.com/v0/b/digiskills-96385.appspot.com/o/user-profile-collection%2Fmale_avatar-removebg-preview.png?alt=media&token=a65bdbdb-8a8f-4132-ac18-7d48a8c3cf3a") => {
     try {
         await setDoc(doc(db, "users", uid), {
             firstName,

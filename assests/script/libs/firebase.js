@@ -27,14 +27,20 @@ import {
     addDoc,
     getDoc,
     setDoc,
-    doc
+    doc,
+    updateDoc 
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+
+// FireStore Storrage 
+import { getStorage , ref , uploadBytes , getDownloadURL} from "https://www.gstatic.com/firebasejs/10.12.4/firebase-storage.js";
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
+const storage = getStorage(app);
 
 
-export { auth, db, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, getFirestore, collection, addDoc, getDoc, setDoc, doc, signOut }
+export { auth, db, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, getFirestore, collection, addDoc, getDoc, setDoc, doc, signOut, storage , ref , uploadBytes , getDownloadURL ,  updateDoc  }

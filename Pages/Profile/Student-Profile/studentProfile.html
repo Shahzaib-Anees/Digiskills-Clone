@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         LMS DigiSkills | Learning Management System</title>
-    <link rel="stylesheet" href="../main/Styles/profile.css">
+    <link rel="icon" type="img/gif" href="../../../assests/Media/thumbnail-web.png">
+    <link rel="stylesheet" href="./../common/styles/style.css">
+    <link rel="stylesheet" href="./main/styles/studentProfile.css">
     <link rel="stylesheet" href="../main/Styles/Media.css">
     <link rel="stylesheet" href="../../../assests/Stylesheets/loaders.css">
-    <!-- <link rel="stylesheet" href="./main/styles/userProfile.css"> -->
     <link rel="stylesheet" href="../../../assests/Stylesheets/anim.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
@@ -39,7 +40,8 @@
                 <div class="row2">
                     <div id="profile">
                         <div class="profile-img" onclick="showProfilePannel()">
-                            <img class="user-profile-img" src="../main/Media/male_avatar-removebg-preview.png" alt="">
+                            <img id="nav-user-profile-img" class="user-profile-img"
+                                src="../main/Media/male_avatar-removebg-preview.png" alt="">
                         </div>
 
                         <div id="profile-pannel">
@@ -134,7 +136,7 @@
             </div>
         </article>
 
-        <section id="sec-1">
+        <section id="profile-sec">
             <article id="col-nav-cont">
                 <article id="col-nav">
                     <a href="" class="col-nav-item" onmouseenter="colNavItemEnter(this)"
@@ -169,10 +171,85 @@
                     </a>
                 </article>
             </article>
+            <article id="profile-main-cont">
+                <h3 id="profile-main-heading">My Profile</h3>
+
+                <div class="breadcrum">
+                    <a href="../profile.html">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <span>Home</span>
+                    </a>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                    <a href="#">
+                        <i class="fa-solid fa-book"></i>
+                        <span id="main-page-heading">My Profile</span>
+                    </a>
+
+                </div>
+
+                <article class="main-profile-info-sec">
+                    <div class="profile-container">
+                        <span class="null color-picker-class"></span>
+                        <div class="profile-info-header">
+                            <div id="profile-img-cont">
+                                <div class="img-cont">
+                                    <img id="profile-image" class="user-profile-img"
+                                        src="../main/Media/male_avatar-removebg-preview.png" alt="profile-image">
+                                    <div id="overlay">
+                                        <i class="fa-solid fa-camera camera-icon" onclick="getProfileImg()"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-nfo-sec-name-cont">
+                                <p id="profile-info-sec-name">
+                                </p>
+                            </div>
+                            <p> Note: JPG file of Max. 150KB is required for Profile Picture</p>
+                        </div>
+                        <div class="profile-info-sec-content">
+                            <div class="profile-info-sec-content-item">
+                                <p>
+                                    <i class="fa-solid fa-book"></i>
+                                    <span>Education</span>
+                                </p>
+                                <p class="trainee-education-info-cont" id="thin-info-para-content">
+                                    <span id="trainee-education-dom">N/A</span>
+                                </p>
+                            </div>
+                            <div class="profile-info-sec-content-item">
+                                <p>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>Email</span>
+                                </p>
+                                <p class="trainee-education-info-cont" id="thin-info-para-content">
+                                    <span id="trainee-email-dom"></span>
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div id="profile-img-saver">
+                        <div class="cross-mark" onclick="closeProfileImgSave()">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <input type="file" id="profile-img-file" accept="image/.jpg/.png">
+                        <p> Note: JPG file of Max. 150KB is required for Profile Picture</p>
+                        <button id="save-profile-img">
+                            Save
+                        </button>
+                    </div>
+                    </div>
+                </article>
+            </article>
         </section>
     </main>
 </body>
-<script src="../main/script/profile.js"></script>
+<script src="./../common/script/script.js"></script>
 <script src="./main/script/studentProfile.js"></script>
 <script src="./main/script/script.js" type="module"></script>
 
