@@ -1,9 +1,15 @@
 @media(min-width:200px) and (max-width:900px){
+    #profile-sec{
+        padding: 0px;
+    }
+    
     #profile-main-cont {
-        padding: 10px 10px;
+        width: 100%;
+        padding: 0px;
         display: flex;
         flex-direction: column;
         gap: 4px;
+        padding: 10px 10px;
     }
 
     #profile-main-cont>h3{
@@ -14,7 +20,7 @@
     }
 
     .main-profile-info-sec{
-        width: 97vw;
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -23,7 +29,7 @@
 
 @media(min-width: 800px) and (max-width:900px){
     .main-profile-info-sec{
-        width: 95vw;
+        width: 100%;
         display: flex;
         flex-direction: column;
         /* align-items: center; */
@@ -31,6 +37,6 @@
         gap: 10px;
     }
     .profile-container{
-        width: 80%;
+        width: 100%;
     }
 }

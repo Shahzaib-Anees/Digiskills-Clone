@@ -19,6 +19,7 @@ body {
 }
 
 #profile-main-cont {
+    width: 100%;
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
@@ -204,6 +205,7 @@ body {
     transform: translate(-50%, -50%);
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 2;
     display: none;
 }
 
