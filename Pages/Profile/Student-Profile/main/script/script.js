@@ -9,6 +9,21 @@ const userProfileNameNav = document.getElementById("user-profile-name");
 let currentUser = localStorage.getItem("currentUser");
 const userProfileImg = document.querySelectorAll(".user-profile-img");
 
+// ProsTOJoinDgSkills 
+let prosToJoinDg;
+document.getElementById("dg-skills-pros").addEventListener("change", (e) => {
+    prosToJoinDg = e.target.value;
+    const otherSpecifyReason = document.getElementById("other-specify-reason");
+    const reasonTextInputField = otherSpecifyReason.childNodes[3];
+    if (prosToJoinDg === "others-specify") {
+        otherSpecifyReason.style.display = "flex";
+        reasonTextInputField.setAttribute("required", "");
+    } else {
+        otherSpecifyReason.style.display = "none";
+        reasonTextInputField.removeAttribute("required");
+    }
+})
+
 const uploadImageToStorage = async (file) => {
     const storageRef = ref(storage, `user-profile-collection/${file.name}`);
     try {
@@ -77,11 +92,11 @@ const getUserData = async () => {
             userProfileNameNav.innerText = `${currentUserDoc.firstName.toUpperCase()} ${currentUserDoc.lastName.toUpperCase()}`;
 
             userProfileEmailNav.innerText = currentUserDoc.email;
-            
+
             userProfileNameDom.innerText = `${currentUserDoc.firstName} ${currentUserDoc.lastName}`;
 
             traineeEmailDom.innerText = currentUserDoc.email;
-            
+
             userProfileImg.forEach(img => {
                 img.src = `${currentUserDoc.imageUrl}`
             })
@@ -109,3 +124,4 @@ signOutBtn.addEventListener("click", () => {
         console.log(error);
     });
 })
+

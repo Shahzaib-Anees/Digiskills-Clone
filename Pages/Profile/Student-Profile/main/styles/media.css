@@ -1,8 +1,8 @@
-@media(min-width:200px) and (max-width:900px){
-    #profile-sec{
+@media(min-width:200px) and (max-width:990px) {
+    #profile-sec {
         padding: 0px;
     }
-    
+
     #profile-main-cont {
         width: 100%;
         padding: 0px;
@@ -12,23 +12,92 @@
         padding: 10px 10px;
     }
 
-    #profile-main-cont>h3{
+    #profile-main-cont>h3 {
         font-size: 26px;
     }
-    .profile-container{
+
+    .profile-container {
         width: 100%;
     }
 
-    .main-profile-info-sec{
+    .main-profile-info-sec {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
+
+    .trainee-profile-info-cont {
+        width: 100%;
+    }
+
+    .multy-input-field-main-container{
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .input-filed-about-para{
+        font-size: 13px;
+        font-weight: 900;
+    }
+
+    .input-field-container-md-12{
+        width: 100%;
+        gap: 0px;
+    }
+
+    .input-field-container-md-4{
+        width: 100%;
+    }
+
+    .input-field-container-md-2{
+        width: 100%;
+    }
+
+    .input-field-container-md-8{
+        width: 100%;
+    }
+    .multy-radio-input-field-main-container{
+        width: 100%;
+    }
+
+    .radio-input-container>label{
+        font-size: 14px; 
+    }
+
+    #about-span-light{
+        font-size: 11px;
+        font-weight: 800;
+    }
+
+    .input-field-container-md-6{
+        width: 100%;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .row>div{
+        width: 100%;
+    }
+
+    #how-know-us-info-check-list{
+        height: fit-content;
+    }
+
+    .multy-check-container{
+        height: fit-content;
+        gap: 6px;
+    }
+    
 }
 
-@media(min-width: 800px) and (max-width:900px){
-    .main-profile-info-sec{
+
+@media(min-width: 800px) and (max-width:900px) {
+    .main-profile-info-sec {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -36,7 +105,12 @@
         justify-content: center;
         gap: 10px;
     }
-    .profile-container{
+
+    .profile-container {
+        width: 100%;
+    }
+
+    .trainee-profile-info-cont {
         width: 100%;
     }
 }

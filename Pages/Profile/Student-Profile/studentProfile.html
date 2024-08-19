@@ -232,8 +232,6 @@
                         </div>
 
                     </div>
-
-
                     <div id="profile-img-saver">
                         <div class="cross-mark" onclick="closeProfileImgSave()">
                             <i class="fa-solid fa-xmark"></i>
@@ -244,6 +242,752 @@
                             Save
                         </button>
                     </div>
+                    <div class="trainee-profile-info-cont">
+                        <p>Fields marked with an [<span>*</span>] are required</p>
+                        <div id="profile-db-info-cont">
+                            <a href="#" id="personal-info-sec">
+                                <h4>Personal Information</h4>
+                                <span id="icon" onclick="collapseInfoPannel(this)">
+                                    <i class="fa-solid fa-plus"></i>
+                                </span>
+                            </a>
+                            <article id="pannel-collapse-1" class="collapse-pannel">
+                                <div class="multy-input-field-main-container" id="trainee-name-info">
+                                    <div class="input-field-container-md-12">
+                                        <p class="input-filed-about-para">
+                                            <span class="steric-span">
+                                                *
+                                            </span>
+                                            First Name
+                                        </p>
+                                        <input type="text" class="input-field" placeholder="enter your first name"
+                                            id="trainee-first-name">
+                                    </div>
+                                    <div class="input-field-container-md-12">
+                                        <p class="input-filed-about-para">
+                                            Middle Name
+                                        </p>
+                                        <input type="text" class="input-field" placeholder="enter your middle name"
+                                            id="trainee-middle-name">
+                                    </div>
+                                    <div class="input-field-container-md-12">
+                                        <p class="input-filed-about-para">
+                                            <span class="steric-span">
+                                                *
+                                            </span>
+                                            Last Name
+                                        </p>
+                                        <input type="text" class="input-field" placeholder="enter your last name"
+                                            id="trainee-last-name">
+                                    </div>
+                                </div>
+                                <div class="input-field-container-md-12" id="trainee-gender-info">
+                                    <p class="input-filed-about-para">
+                                        <span class="steric-span">
+                                            *
+                                        </span>
+                                        Gender
+                                    </p>
+                                    <div class="multy-radio-input-field-main-container">
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="trainee-gender" id="trainee-gender-male"
+                                                value="male" checked>
+                                            <label for="trainee-gender-male">Male</label>
+                                        </div>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="trainee-gender" id="trainee-gender-female"
+                                                value="female">
+                                            <label for="trainee-gender-female">Female</label>
+                                        </div>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="trainee-gender" id="trainee-gender-xgender"
+                                                value="xgender">
+                                            <label for="trainee-gender-xgender">X-gender</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-field-container-md-12" id="trainee-birth-info">
+                                    <p class="input-filed-about-para">
+                                        <span class="steric-span">
+                                            *
+                                        </span>
+                                        Date of Birth
+                                    </p>
+                                    <div class="multy-input-field-main-container">
+                                        <select name="birth-info-select" id="trainee-birth-day" class="input-field">
+                                            <option value="no">Day</option>
+                                        </select>
+                                        <select name="birth-info-select" id="trainee-birth-month" class="input-field">
+                                            <option value="no">Month</option>
+                                        </select>
+                                        <select name="birth-info-select" id="trainee-birth-year" class="input-field">
+                                            <option value="no">Year</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="dual-input-field-main-container" id="trainee-cnic-info">
+                                    <p class="input-filed-about-para">
+                                        <span class="steric-span">
+                                            *
+                                        </span>
+                                        CNIC/NICOP/B-form
+                                        <span id="about-span-light">
+                                            Example: 3320122222222 (Without Dashes). In case you do not have your own
+                                            CNIC, please enter your parents/guardian
+                                        </span>
+                                    </p>
+                                    <div class="multy-input-field-main-container">
+                                        <div class="input-field-container-md-4">
+                                            <span id="about-span-light">
+                                                CNIC here
+                                            </span>
+                                            <input type="tel" class="input-field" id="trainee-cnic-no">
+                                        </div>
+                                        <div class="multy-radio-input-field-main-container">
+                                            <div class="radio-input-container">
+                                                <input type="radio" name="trainee-cnic-type" id="personal-cnic-type"
+                                                    value="personal" checked>
+                                                <label for="personal-cnic-type">Personal</label>
+                                            </div>
+                                            <div class="radio-input-container">
+                                                <input type="radio" name="trainee-cnic-type" id="parent-cnic-type"
+                                                    value="parent">
+                                                <label for="parent-cnic-type">Parents / Guardian</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="multy-input-field-main-container" id="trainee-citizenship-info">
+                                    <div class="input-field-container-md-12">
+                                        <p class="input-filed-about-para">
+                                            <span class="steric-span">
+                                                *
+                                            </span>
+                                            Country
+                                        </p>
+                                        <select name="trainee-country-info" id="trainee-country" class="input-field">
+                                            <option value="no">Select Country</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field-container-md-12">
+                                        <p class="input-filed-about-para">
+                                            Nationality
+                                        </p>
+                                        <select name="trainee-country-info" id="trainee-nationality"
+                                            class="input-field">
+                                            <option value="no">Select Nationality</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field-container-md-12">
+                                        <p class="input-filed-about-para">
+                                            <span class="steric-span">
+                                                *
+                                            </span>
+                                            City
+                                        </p>
+                                        <select name="trainee-country-info" id="trainee-city" class="input-field">
+                                            <option value="no">Select City</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="input-field-container-md-12">
+                                    <p class="input-filed-about-para">
+                                        <span class="steric-span">
+                                            *
+                                        </span>
+                                        Mailing/Postal Address
+                                    </p>
+                                    <textarea name="trainee-postal-info" id="trainee-postal-code" class="input-field">
+                                    </textarea>
+                                </div>
+                                <div class="input-field-container-md-12" id="trainee-mobile-info">
+                                    <p class="input-filed-about-para">
+                                        <span class="steric-span">
+                                            *
+                                        </span>
+                                        Mobile
+                                        <span id="about-span-light">
+                                            Example: 923331122334 Country Code + Mobile Operator Code + Number.
+                                        </span>
+                                    </p>
+                                    <div class="multy-input-field-main-container">
+                                        <div class="input-field-container-md-2">
+                                            <select name="trainee-mobile-info" id="trainee-no-code" class="input-field"
+                                                disabled style="background-color: #d0d0d0;color: #100110;">
+                                                <option value="92">92</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-field-container-md-2">
+                                            <select name="trainee-mobile-info" id="trainee-operator-code"
+                                                class="input-field">
+                                                <option value="no">Select Operator Code</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-field-container-md-8">
+                                            <input type="tel" name="trainee-mobile-info" id="trainee-mobile-no"
+                                                class="input-field">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-field-container-md-12" id="trainee-device-confirmation-info">
+                                    <p class="input-filed-about-para">
+                                        <span class="steric-span">
+                                            *
+                                        </span>
+                                        Personal Computer/Laptop at Home
+                                    </p>
+                                    <div class="multy-radio-input-field-main-container"
+                                        id="trainee-device-confirmation-info">
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="trainee-device-confirmation-info"
+                                                id="trainee-device-yes" value="yes" checked>
+                                            <label for="trainee-device-yes">Yes</label>
+                                        </div>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="trainee-device-confirmation-info"
+                                                id="trainee-device-no" value="no">
+                                            <label for="trainee-device-no">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-field-container-md-12" id="int-confiramation-info">
+                                    <p class="input-filed-about-para">
+                                        <span class="steric-span">
+                                            *
+                                        </span>
+                                        Internet Facility At Home
+                                    </p>
+                                    <div class="multy-col-radio-input-field-main-container">
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="int-confiramation-info" value="DSL"
+                                                id="int-confiramation-info-0">
+                                            <label for="int-confiramation-info-0">DSL</label>
+                                        </div>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="int-confiramation-info" value="cable-internet"
+                                                id="int-confiramation-info-1">
+                                            <label for="int-confiramation-info-1"> Cable Internet</label>
+                                        </div>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="int-confiramation-info" value="WiMax"
+                                                id="int-confiramation-info-2">
+                                            <label for="int-confiramation-info-2">WiMax</label>
+                                        </div>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="int-confiramation-info" value="evo/3G/4G"
+                                                id="int-confiramation-info-3">
+                                            <label for="int-confiramation-info-3">Evo/3G/4G</label>
+                                        </div>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="int-confiramation-info" value="fibre-optics"
+                                                id="int-confiramation-info-4">
+                                            <label for="int-confiramation-info-4"> Fiber Optics</label>
+                                        </div>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="int-confiramation-info" value="none"
+                                                id="int-confiramation-info-5">
+                                            <label for="int-confiramation-info-5">None</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <a href="#" id="qualification-info-sec">
+                                <h4>Qualification/Experience</h4>
+                                <span id="icon" onclick="collapseInfoPannel(this)">
+                                    <i class="fa-solid fa-plus"></i>
+                                </span>
+                            </a>
+                            <div id="pannel-collapse-2" class="collapse-pannel">
+                                <div class="input-field-container-md-6" id="traiinee-quaalification-info">
+                                    <p class="input-filed-about-para">
+                                        <span class="steric-span">*</span>
+                                        Highest Qualification
+                                    </p>
+                                    <select name="trainee-qualification-info" id="trainee-qualification"
+                                        class="input-field">
+                                        <option value="none">Select Qualification</option>
+                                    </select>
+                                </div>
+                                <div class="input-field-container-md-6" id="trainee-specialization-info">
+                                    <p class="input-filed-about-para">
+                                        <span class="steric-span">*</span>
+                                        Specialization
+                                    </p>
+                                    <select name="trainee-specialization-info" id="trainee-specialization"
+                                        class="input-field">
+                                        <option value="none">Select Specialization</option>
+                                    </select>
+                                </div>
+
+                                <div class="row">
+                                    <div class="input-field-container-md-12" id="traiinee-status-info">
+                                        <p class="input-filed-about-para">
+                                            <span class="steric-span">*</span>
+                                            Current Status
+                                        </p>
+                                        <select name="trainee-status-info" id="trainee-status" class="input-field">
+                                            <option value="none">Select current Status</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field-container-md-12" id="trainee-plan-info">
+                                        <p class="input-filed-about-para">
+                                            <span class="steric-span">*</span>
+                                            Future Plan
+                                        </p>
+                                        <select name="trainee-qualification-info" id="trainee-qualification"
+                                            class="input-field">
+                                            <option value="none">Select Future Plan</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" id="interest-info-sec">
+                                <h4>Proficiency/Interests</h4>
+                                <span id="icon" onclick="collapseInfoPannel(this)">
+                                    <i class="fa-solid fa-plus"></i>
+                                </span>
+                            </a>
+                            <div id="pannel-collapse-3" class="collapse-pannel">
+                                <div class="input-field-container-md-12">
+                                    <p class="input-filed-about-para">
+                                        <span class="steric-span">*</span>
+                                        Rate your computer proficiency
+                                    </p>
+                                    <div class="multy-col-radio-input-field-main-container"
+                                        id="trainee-computer-proficeiency-info">
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="trainee-computer-proficeiency" value="no"
+                                                id="trainee-computer-proficeiency01">
+                                            <label for="trainee-computer-proficeiency01">No Knowledge</label>
+                                        </div>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="trainee-computer-proficeiency" value="basic"
+                                                id="trainee-computer-proficeiency02">
+                                            <label for="trainee-computer-proficeiency02">Below Average Knowledge</label>
+                                        </div>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="trainee-computer-proficeiency" value="average"
+                                                id="trainee-computer-proficeiency03">
+                                            <label for="trainee-computer-proficeiency03"> Basic/Average
+                                                Knowledge</label>
+                                        </div>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="trainee-computer-proficeiency"
+                                                value="above-average" id="trainee-computer-proficeiency04">
+                                            <label for="trainee-computer-proficeiency04">Above Average
+                                                Knowledege</label>
+                                        </div>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="trainee-computer-proficeiency" value="full"
+                                                id="trainee-computer-proficeiency05">
+                                            <label for="trainee-computer-proficeiency05">
+                                                Full Knowledge</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="input-field-container-md-12" id="trainee-eng-lng-prof-info">
+                                    <p class="input-filed-about-para">
+                                        <span class="steric-span">*</span>
+                                        Rate your English language proficiency
+                                    </p>
+                                    <div class="row">
+                                        <div class="multy-col-radio-input-field-main-container">
+                                            <p class="input-filed-about-para">Speaking:</p>
+                                            <div class="radio-input-container">
+                                                <div class="radio-input-container">
+                                                    <input type="radio" name="trainee-eng-lng-speak-prof" value="no"
+                                                        id="trainee-eng-lng-speak-prof01">
+                                                    <label for="trainee-eng-lng-speak-prof01">No Knowledge</label>
+                                                </div>
+                                            </div>
+                                            <div class="radio-input-container">
+                                                <div class="radio-input-container">
+                                                    <input type="radio" name="trainee-eng-lng-speak-prof"
+                                                        value="biggner" id="trainee-eng-lng-speak-prof02">
+                                                    <label for="trainee-eng-lng-speak-prof02">Beginner</label>
+                                                </div>
+                                            </div>
+                                            <div class="radio-input-container">
+                                                <div class="radio-input-container">
+                                                    <input type="radio" name="trainee-eng-lng-speak-prof"
+                                                        value="intermediate" id="trainee-eng-lng-speak-prof03">
+                                                    <label for="trainee-eng-lng-speak-prof03">Intermediate</label>
+                                                </div>
+                                            </div>
+                                            <div class="radio-input-container">
+                                                <div class="radio-input-container">
+                                                    <input type="radio" name="trainee-eng-lng-speak-prof" value="pro"
+                                                        id="trainee-eng-lng-speak-prof04">
+                                                    <label for="trainee-eng-lng-speak-prof04">Proficient</label>
+                                                </div>
+                                            </div>
+                                            <div class="radio-input-container">
+                                                <div class="radio-input-container">
+                                                    <input type="radio" name="trainee-eng-lng-speak-prof" value="expert"
+                                                        id="trainee-eng-lng-speak-prof05">
+                                                    <label for="trainee-eng-lng-speak-prof05">Expert</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="multy-col-radio-input-field-main-container">
+                                            <p class="input-filed-about-para">
+                                                Writing:
+                                            </p>
+                                            <div class="radio-input-container">
+                                                <div class="radio-input-container">
+                                                    <input type="radio" name="trainee-eng-lng-writ-prof" value="no"
+                                                        id="trainee-eng-lng-writ-prof01">
+                                                    <label for="trainee-eng-lng-writ-prof01">No Knowledge</label>
+                                                </div>
+                                            </div>
+                                            <div class="radio-input-container">
+                                                <div class="radio-input-container">
+                                                    <input type="radio" name="trainee-eng-lng-writ-prof" value="biggner"
+                                                        id="trainee-eng-lng-writ-prof02">
+                                                    <label for="trainee-eng-lng-writ-prof02">Beginner</label>
+                                                </div>
+                                            </div>
+                                            <div class="radio-input-container">
+                                                <div class="radio-input-container">
+                                                    <input type="radio" name="trainee-eng-lng-writ-prof"
+                                                        value="intermediate" id="trainee-eng-lng-writ-prof03">
+                                                    <label for="trainee-eng-lng-writ-prof03">Intermediate</label>
+                                                </div>
+                                            </div>
+                                            <div class="radio-input-container">
+                                                <div class="radio-input-container">
+                                                    <input type="radio" name="trainee-eng-lng-writ-prof" value="pro"
+                                                        id="trainee-eng-lng-writ-prof04">
+                                                    <label for="trainee-eng-lng-writ-prof04">Proficient</label>
+                                                </div>
+                                            </div>
+                                            <div class="radio-input-container">
+                                                <div class="radio-input-container">
+                                                    <input type="radio" name="trainee-eng-lng-writ-prof" value="expert"
+                                                        id="trainee-eng-lng-writ-prof05">
+                                                    <label for="trainee-eng-lng-writ-prof05">Expert</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="multy-input-field-main-container" id="dg-skils-joining-purp-info">
+                                    <div class="input-field-container-md-6">
+                                        <p class="input-filed-about-para">
+                                            Why do you want to join course(s) of DigiSkills.pk?
+                                        </p>
+                                        <select name="dg-skills-pros" id="dg-skills-pros" class="input-field">
+                                            <option value="none">
+                                                Select your choice
+                                            </option>
+                                            <option value="freelance-purpose">
+                                                To start freelancing
+                                            </option>
+                                            <option value="employement-purpose">
+                                                To find Employement
+                                            </option>
+                                            <option value="self-development-purpose">
+                                                Self development including my skills
+                                            </option>
+                                            <option value="job-promotion-purpose">
+                                                For advancement/promotion at current job
+                                            </option>
+                                            <option value="leisure-time-purpose">
+                                                To spend free time
+                                            </option>
+                                            <option value="others-specify">
+                                                Other (Specify)
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field-container-md-6" id="other-specify-reason"
+                                        style="display: none;">
+                                        <p class="input-filed-about-para">
+                                            <span class="steric-span">
+                                                *
+                                            </span>
+                                            Reason To Join
+                                            <span id="about-span-light" style="color: red;">
+                                                Please Enter Reason To Join
+                                            </span>
+                                        </p>
+                                        <input type="text" class="input-field" id="other-specify-reason-input">
+                                    </div>
+                                </div>
+
+                                <div class="input-field-container-md-12" id="trainee-prefered-courses-info">
+                                    <p class="input-filed-about-para">
+                                        <span class="steric-span">
+                                            *
+                                        </span>
+                                        What would you like to learn?
+                                        <span id="about-span-light" style="color: red;">
+                                            This is NOT Course Enrollment. We are just taking your interest here, and
+                                            you will have to ENROLL 2 courses explicitly after completing profile.
+                                        </span>
+                                    </p>
+                                    <ul class="input-field-container-md-12 multy-check-container"
+                                        id="trainee-prefered-courses-check-list">
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses"
+                                                value="Affiliate-Marketing" id="trainee-prefered-courses01">
+                                            <label for="trainee-prefered-courses01">
+                                                Affiliate Marketing
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses" value=" AutoCAD"
+                                                id="trainee-prefered-courses02">
+                                            <label for="trainee-prefered-courses02">
+                                                AutoCAD
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses"
+                                                value="Communication-and-Soft-Skills" id="trainee-prefered-courses03">
+                                            <label for="trainee-prefered-courses03">
+                                                Communication and Soft Skills
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses"
+                                                value="Creative-Writing" id="trainee-prefered-courses04">
+                                            <label for="trainee-prefered-courses04">
+                                                Creative Writing
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses"
+                                                value="Data-Analytics-and-Business-Intelligence"
+                                                id="trainee-prefered-courses06">
+                                            <label for="trainee-prefered-courses06">
+                                                Data Analytics and Business Intelligence
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses"
+                                                value="Digital-Literacy" id="trainee-prefered-courses07">
+                                            <label for="trainee-prefered-courses07">
+                                                Digital Literacy
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses"
+                                                value="Digital-Marketing" id="trainee-prefered-courses08">
+                                            <label for="trainee-prefered-courses08">
+                                                Digital Marketing
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses"
+                                                value="E-Commerce-Management" id="trainee-prefered-courses09">
+                                            <label for="trainee-prefered-courses09">
+                                                E-Commerce Management
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses" value="Freelancing"
+                                                id="trainee-prefered-courses10">
+                                            <label for="trainee-prefered-courses10">
+                                                Freelancing
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses"
+                                                value="Graphic-Design" id="trainee-prefered-courses11">
+                                            <label for="trainee-prefered-courses11">
+                                                Graphic Design
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses" value="QuickBooks"
+                                                id="trainee-prefered-courses12">
+                                            <label for="trainee-prefered-courses12">
+                                                QuickBooks
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses" value="SEO"
+                                                id="trainee-prefered-courses13">
+                                            <label for="trainee-prefered-courses13">
+                                                SEO (Search Engine Optimization)
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses"
+                                                value="Virtual-Assistant" id="trainee-prefered-courses14">
+                                            <label for="trainee-prefered-courses14">
+                                                Virtual Assistant
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses"
+                                                value="Video-Editing,Animation-and-Vlogging"
+                                                id="trainee-prefered-courses15">
+                                            <label for="trainee-prefered-courses15">
+                                                Video Editing, Animation and Vlogging
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container">
+                                            <input type="checkbox" name="trainee-prefered-courses" value="WordPress"
+                                                id="trainee-prefered-courses16">
+                                            <label for="trainee-prefered-courses16">
+                                                WordPress
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="input-field-container-md-12" id="trainee-prefered-courses-info">
+                                    <p class="input-filed-about-para">
+                                        <span class="steric-span">
+                                            *
+                                        </span>
+                                        Where did you hear about us?
+                                    </p>
+                                    <ul class="input-field-container-md-12 multy-check-container"
+                                        id="how-know-us-info-check-list">
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt01"
+                                                value="Newspaper/Magazine">
+                                            <label for="how-know-us-info-opt01">
+                                                Newspaper/Magazine
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt02" value="Facebook">
+                                            <label for="how-know-us-info-opt02">
+                                                Facebook
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt03" value="Instagram">
+                                            <label for="how-know-us-info-opt03">
+                                                Instagram
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt04" value="Twitter
+">
+                                            <label for="how-know-us-info-opt04">
+                                                Twitter
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt05" value="YouTube">
+                                            <label for="how-know-us-info-opt05">
+                                                YouTube
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt06" value="Internet">
+                                            <label for="how-know-us-info-opt06">
+                                                Internet Search (google, yahoo etc.)
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt07" value="Friend/Family">
+                                            <label for="how-know-us-info-opt07">
+                                                Friend / Family
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt08"
+                                                value="Banner/Billboard">
+                                            <label for="how-know-us-info-opt08">
+                                                Banner / Billboard
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt08" value="Blog-post
+                                                ">
+                                            <label for="how-know-us-info-opt08">
+                                                Blog post
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt09" value="TV-Ticker">
+                                            <label for="how-know-us-info-opt09">
+                                                TV Ticker
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt10" value="TV-Program">
+                                            <label for="how-know-us-info-opt10">
+                                                TV Program
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt11" value="Radio-Spot">
+                                            <label for="how-know-us-info-opt11">
+                                                Radio Spot
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt12"
+                                                value="Radio-Show/Program">
+                                            <label for="how-know-us-info-opt12">
+                                                Radio Show/Program
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt13"
+                                                value="University/Academic-Institution">
+                                            <label for="how-know-us-info-opt13">
+                                                University/Academic Institution
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt14" value="Any-Other">
+                                            <label for="how-know-us-info-opt14">
+                                                Any Other Event
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt15" value="SMS/Mobile-Ad">
+                                            <label for="how-know-us-info-opt15">
+                                                SMS / Mobile Ad
+                                            </label>
+                                        </li>
+                                        <li class="radio-input-container" id="how-know-us-info">
+                                            <input type="checkbox" name="how-know-us-info-opt16" value="other">
+                                            <label for="how-know-us-info-opt16">
+                                                Other
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="input-field-container-md-12">
+                                    <p class="input-filed-about-para">
+                                        <span class="steric-span">
+                                            *
+                                        </span>
+                                        Are you familiar with freelancing?
+                                    </p>
+                                    <div class="multy-radio-input-field-main-container" id="freelnce-familarity-info">
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="freelancing-info" id="freelancing-info-yes"
+                                                value="yes" checked>
+                                            <label for="freelancing-info-yes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="freelancing-info" id="freelancing-info-no"
+                                                value="no">
+                                            <label for="freelancing-info-no">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="null-space"></span>
+                            <button id="save-profile-info">
+                                SUBMIT
+                            </button>
+                        </div>
+
                     </div>
                 </article>
             </article>
