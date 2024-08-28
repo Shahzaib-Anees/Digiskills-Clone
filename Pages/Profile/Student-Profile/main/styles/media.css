@@ -31,47 +31,57 @@
         width: 100%;
     }
 
-    .multy-input-field-main-container{
+    .multy-input-field-main-container {
         flex-direction: column;
         gap: 5px;
     }
 
-    .input-filed-about-para{
+    .input-filed-about-para {
         font-size: 13px;
         font-weight: 900;
     }
 
-    .input-field-container-md-12{
+    .input-field-container-md-12 {
         width: 100%;
         gap: 0px;
     }
 
-    .input-field-container-md-4{
+    .input-field-container-md-4 {
         width: 100%;
     }
 
-    .input-field-container-md-2{
+    .input-field-container-md-2 {
         width: 100%;
     }
 
-    .input-field-container-md-8{
-        width: 100%;
-    }
-    .multy-radio-input-field-main-container{
+    .input-field-container-md-8 {
         width: 100%;
     }
 
-    .radio-input-container>label{
-        font-size: 14px; 
+    .multy-radio-input-field-main-container {
+        width: 100%;
     }
 
-    #about-span-light{
+    .radio-input-container>label {
+        font-size: 14px;
+    }
+
+    #about-span-light {
         font-size: 11px;
         font-weight: 800;
     }
 
-    .input-field-container-md-6{
+    .input-field-container-md-6 {
         width: 100%;
+    }
+
+
+    .multy-col-radio-input-field-main-container {
+        margin-left: 0px;
+    }
+
+    .multy-check-container{
+        margin-left: 0px;
     }
 
     .row {
@@ -79,20 +89,20 @@
         flex-direction: column;
         gap: 10px;
     }
-    
-    .row>div{
+
+    .row>div {
         width: 100%;
     }
 
-    #how-know-us-info-check-list{
+    #how-know-us-info-check-list {
         height: fit-content;
     }
 
-    .multy-check-container{
+    .multy-check-container {
         height: fit-content;
         gap: 6px;
     }
-    
+
 }
 
 
